@@ -1,0 +1,9 @@
+
+{
+  "backendUrl":"http://51.144.36.27/graphql",
+  "webAppUrl": "http://devfrontsportunity.westeurope.cloudapp.azure.com",
+  "socketUrl":"http://51.144.36.27",
+  "authUrl": "http://51.144.36.27/auth",
+  "firTokenUrl": "http://51.144.36.27/auth/devicetoken",
+  "unsetFirTokenUrl": "http://51.144.36.27/auth/removeDeviceToken"
+}

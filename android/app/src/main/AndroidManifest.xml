@@ -1,0 +1,81 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sportunity"
+    android:versionCode="91"
+    android:versionName="1.91"
+    android:theme="@style/AppTheme">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme"
+      android:launchMode="singleTop"
+      android:networkSecurityConfig="@xml/network_security_config">
+      <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+      <receiver android:name="com.evollu.react.fcm.FIRLocalMessagingPublisher"/>
+      <receiver android:enabled="true" android:exported="true"  android:name="com.evollu.react.fcm.FIRSystemBootEventReceiver">
+          <intent-filter>
+              <action android:name="android.intent.action.BOOT_COMPLETED"/>
+              <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+              <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+      </receiver>
+      <service android:name="com.evollu.react.fcm.MessagingService" android:enabled="true" android:exported="true">
+        <intent-filter>
+          <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+      </service>
+      <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
+        <intent-filter>
+          <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+      </service>
+
+      <service android:name="com.evollu.react.fcm.InstanceIdService" android:exported="false">
+        <intent-filter>
+          <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+        </intent-filter>
+      </service>
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <intent-filter android:label="filter_react_native">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="sportunity" android:host="sportunity" />
+            <data android:scheme="sportunity" android:host="profile" />
+            <data android:scheme="sportunity" android:host="chat" />
+            <data android:scheme="sportunity" android:host="circle" />
+            <data android:scheme="sportunity" android:host="login" />
+        </intent-filter>
+      </activity>
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      
+      <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyAC6hY0V4cGyw2_-trCRU3VIPicoZenjjU"/>
+      <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+      <meta-data
+        android:name="io.fabric.ApiKey"
+        android:value="c4a8f8216c7eee24b1706513150da9a4ac78869d"
+      />
+    </application>
+
+</manifest>

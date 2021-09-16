@@ -1,0 +1,12 @@
+{
+  "domains": {
+    "*.backendsportunity2017.com": {
+      "pins": [
+        "sha256/QvbOLo6Zcwqm6+Ph4h+cFlBKI19s62KPaahC4sT76Mk=",
+        "sha256/8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8=",
+        "sha256/Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA=",
+        "sha256/VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+      ]
+    }
+  }
+}

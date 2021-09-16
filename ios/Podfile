@@ -1,0 +1,94 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '9.0'
+
+target 'sportunity' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for sportunity
+  rn_path = '../node_modules/react-native'
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'yoga', path: "#{rn_path}/ReactCommon/yoga/yoga.podspec"
+  pod 'React', path: rn_path, subspecs: [
+    'ART',
+    'Core',
+    'CxxBridge',
+    'DevSupport',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+  ]
+
+  pod 'FacebookSDK'
+  pod 'FacebookSDK/LoginKit'
+  pod 'FacebookSDK/ShareKit'
+  pod 'FacebookSDK/PlacesKit'
+  
+  pod 'FBSDKMessengerShareKit'
+
+  pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
+  
+  pod 'Firebase'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Core'
+  pod 'Fabric'
+  pod 'Crashlytics'
+  # pod 'Firebase/Crash'
+
+  # pod 'RNFS', :path => '../node_modules/react-native-fs'
+  pod 'react-native-fcm', :path => '../node_modules/react-native-fcm'
+
+    # React Native third party dependencies podspecs
+    pod 'DoubleConversion', :podspec => "#{rn_path}/third-party-podspecs/DoubleConversion.podspec"
+    pod 'glog', :podspec => "#{rn_path}/third-party-podspecs/glog.podspec"
+    pod 'Folly', :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec"
+  
+    # react-native-maps dependencies
+    pod 'react-native-maps', path: rn_maps_path
+    pod 'react-native-google-maps', path: rn_maps_path  # Remove this line if you don't want to support GoogleMaps on iOS
+    # pod 'GoogleMaps'  # Remove this line if you don't want to support GoogleMaps on iOS
+    # pod 'Google-Maps-iOS-Utils' # Remove this line if you don't want to support GoogleMaps on iOS
+    pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+    pod 'react-native-fetch-blob', :path => '../node_modules/react-native-fetch-blob'
+    pod 'RNI18n', :path => '../node_modules/react-native-i18n'
+    # pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
+  pod 'RNGoogleSignin', :path => '../node_modules/react-native-google-signin'
+
+  pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
+
+  pod 'RNImageCropPicker', :path =>  '../node_modules/react-native-image-crop-picker'
+
+  pod 'react-native-image-resizer', :path => '../node_modules/react-native-image-resizer'
+
+  pod 'RNShare', :path => '../node_modules/react-native-share'
+
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
+  pod 'react-native-version-check', :path => '../node_modules/react-native-version-check'
+
+  pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'react-native-google-maps'
+      target.build_configurations.each do |config|
+        config.build_settings['CLANG_ENABLE_MODULES'] = 'No'
+      end
+    end
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
+end

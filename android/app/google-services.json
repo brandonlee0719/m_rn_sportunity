@@ -1,0 +1,117 @@
+{
+    "project_info": {
+      "project_number": "73804823141",
+      "firebase_url": "https://sportunity-151910.firebaseio.com",
+      "project_id": "sportunity-151910",
+      "storage_bucket": "sportunity-151910.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:73804823141:android:025d72f5580b77cd",
+          "android_client_info": {
+            "package_name": "org.reactjs.native.example.sportunity"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "73804823141-f6hkv5c4d3uka8ob929ps4kt2nhllhse.apps.googleusercontent.com",
+            "client_type": 3
+          },
+          {
+            "client_id": "73804823141-dno14cel60d36jeebn1rbn52stmhrtqd.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyAEANDBokSglEfBAFYhgU0qNUd_GbiizjU"
+          }
+        ],
+        "services": {
+          "analytics_service": {
+            "status": 1
+          },
+          "appinvite_service": {
+            "status": 1,
+            "other_platform_oauth_client": []
+          },
+          "ads_service": {
+            "status": 2
+          }
+        }
+      },
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:73804823141:android:44848e5033441462",
+          "android_client_info": {
+            "package_name": "com.sportunity"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "73804823141-6qja7l3qpegp5pjok8mpdpd1cg57ig88.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.sportunity",
+              "certificate_hash": "197f0114c54e0fa8e40f3782436cf8c7b72cf3d2"
+            }
+          },
+          {
+            "client_id": "73804823141-j6ghucf0ojjqpjat7unrm7vp9eif9leb.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.sportunity",
+              "certificate_hash": "e1f015332c4836887e27ff7298ce5d67c377cb66"
+            }
+          },
+          {
+            "client_id": "73804823141-avmj2h8s636gen4svpinfggdjo1rd1e9.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.sportunity",
+              "certificate_hash": "e8549502c14d27df7ec36d459188c780833eb307"
+            }
+          },
+          {
+            "client_id": "73804823141-f6hkv5c4d3uka8ob929ps4kt2nhllhse.apps.googleusercontent.com",
+            "client_type": 3
+          },
+          {
+            "client_id": "73804823141-dno14cel60d36jeebn1rbn52stmhrtqd.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyAEANDBokSglEfBAFYhgU0qNUd_GbiizjU"
+          }
+        ],
+        "services": {
+          "analytics_service": {
+            "status": 1
+          },
+          "appinvite_service": {
+            "status": 2,
+            "other_platform_oauth_client": [
+              {
+                "client_id": "73804823141-b1357s8hpetvk8t0ivcpshornan12em2.apps.googleusercontent.com",
+                "client_type": 2,
+                "ios_info": {
+                  "bundle_id": "org.reactjs.native.example.sportunity"
+                }
+              },
+              {
+                "client_id": "73804823141-f6hkv5c4d3uka8ob929ps4kt2nhllhse.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          },
+          "ads_service": {
+            "status": 2
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

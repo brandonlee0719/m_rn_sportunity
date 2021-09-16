@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config>
+        <!-- For React Native Hot-reloading system -->
+        <!-- If you are running on a device insert your computer IP -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">13.95.14.5</domain>
+        <domain includeSubdomains="true">backendsportunity2017.com</domain>
+        <pin-set expiration="2020-01-01">
+            <pin digest="SHA-256">QvbOLo6Zcwqm6+Ph4h+cFlBKI19s62KPaahC4sT76Mk=</pin>
+            <pin digest="SHA-256">8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8=</pin>
+        </pin-set>
+        <domain includeSubdomains="true">51.144.36.27</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,6 @@
+{
+  "plugins": [ 
+    ["relay", {"compat": true, "schema": "conf/schema.json"}],
+    "transform-remove-console"
+  ]
+ }

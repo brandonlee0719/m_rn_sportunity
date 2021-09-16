@@ -1,0 +1,26 @@
+{
+  "name": "react-native-version-check",
+  "version": "3.0.2",
+  "summary": "A version checker for react-native applications",
+  "homepage": "https://github.com/kimxogus/react-native-version-check",
+  "license": "MIT",
+  "authors": {
+    "kimxogus": "kgyoo8232@gmail.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/kimxogus/react-native-version-check.git"
+  },
+  "source_files": "ios/RNVersionCheck.{h,m}",
+  "preserve_paths": [
+    "package.json",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}

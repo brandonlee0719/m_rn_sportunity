@@ -1,0 +1,24 @@
+{
+  "name": "react-native-geocoder",
+  "version": "0.5.0",
+  "summary": "react native geocoding and reverse geocoding",
+  "authors": {
+    "devfd": "hello@devfd.me"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/devfd/react-native-geocoder",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/devfd/react-native-geocoder.git",
+    "tag": "v0.5.0"
+  },
+  "source_files": "ios/RNGeocoder/*.{h,m}",
+  "preserve_paths": "**/*.js",
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}
